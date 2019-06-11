@@ -2,7 +2,7 @@
     <div>
      <div class="title">热销推荐</div>
      <ul>
-         <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+         <li class="item border-bottom" v-for="item of list" :key="item.id">
              <img class="item-img" :src="item.imgUrl">
              <div class="item-info">
                  <p class="item-title">{{item.title}}</p>
@@ -17,27 +17,8 @@
 <script>
 export default {
     name : 'HomeRecommend',
-    data () {
-        return {
-            recommendList:[{
-            id:'0001',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/201405/14/3dfad2bcd30c40e91a15f8b7296d86a6.jpg_200x200_265db173.jpg',
-            title:'苏州出发一日游',
-            desc:'苏州出发 苏州一日游 拙政园狮子林寒山寺虎丘纯玩无购物'
-       },{
-            id:'0002',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1603/85/85aa0c000578a01e90.water.jpg_200x200_0ccb4aa8.jpg',
-            title:'苏州出发一日游',
-            desc:'【去哪儿精选】周庄纯玩A线 日游/夜游 赠游船 演出震撼来袭'
-       },{
-            id:'0003',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/201405/30/bcc9329d8af6f5cdddff715ed11a90fd.jpg_200x200_e5a812cd.jpg',
-            title:'无锡出发一日游',
-            desc:'灵山大佛一日游（含门票+去程交通）市区酒店可安排车接'
-       },
-       ]
-        }
-        
+    props:{
+         list: Array
     }
 }
 </script>
