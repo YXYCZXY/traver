@@ -23,10 +23,14 @@ export default {
             },
             swiperList : [{
                 id : '0001',
-                imgUrl: 'https://source.qunarzz.com/site/images/wns/20171019_pc_464x320_7667.jpg'
+                imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg'
             },{
                 id : '0002',
-                imgUrl:'https://imgs.qunarzz.com/p/tts1/1710/16/6cdaa3799d927a02.jpg_r_480x320x90_3404f10a.jpg'
+                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg'
+            },
+            {
+                id : '0003',
+                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg'
             }]
         }
     }
@@ -43,7 +47,7 @@ export default {
     overflow : hidden
     height 0
     width :100%
-    padding-bottom :68.8%
+    padding-bottom :30%
     background :#blue
     }
 </style>

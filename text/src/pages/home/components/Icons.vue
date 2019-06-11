@@ -20,35 +20,40 @@ export default {
         return  {
             iconList :[{
                 id:'0001',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
                 desc: '景点门票'
             },{id:'0002',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
                 desc: '脑壳痛'
                 },{id:'0003',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
                 desc: '很困 很困'
                 },{id:'0004',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png',
                 desc: '想睡觉'
                 },{
                 id:'0005',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png',
                 desc: '景点门票'
                  },{
                 id:'0006',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
                 desc: '脑壳痛'
                 },{id:'0007',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/90/59a2f523ee2f9202.png',
                 desc: '很困 很困'
                 },{id:'0008',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
                 desc: '想睡觉'
                 },{
                 id:'0009',
-                imgUrl:'//img12.360buyimg.com/babel/s190x210_jfs/t1/63728/19/828/7499/5cef7cb4E6ce9e920/b69bbf3ffa88e9ee.png!q90!cc_190x210',
+                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
                 desc: 'mlxg'
+                },
+                {
+                id:'0010',
+                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/ac9ef584416467d8cc557aad650959fd.png',
+                desc: 'mlgj'
                 },
                 ]
         }
@@ -95,10 +100,11 @@ export default {
             display : block
             margin:0 auto 
     .icon-desc
+        text-align :center
         position :absolute
         left :0
         right :0
-        bottom :0
+        bottom :-.3rem
         height :.44rem
         line-height :.44rem
         color : $darkTextColor
