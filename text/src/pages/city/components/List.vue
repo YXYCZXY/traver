@@ -5,64 +5,35 @@
             <div class="title border-topbottom">当前城市</div>
             <div class="button-list">
                 <div class="button-wrapper">
-                    <div class="button">北京</div>
+                    <div class="button">{{this.$store.state.city}}</div>
                 </div>
             </div>
         </div>
             <div class="area">
             <div class="title border-topbottom">热门城市</div>
             <div class="button-list">
-                <div class="button-wrapper">
-                    <div class="button">上海</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">上海</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">广州</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">苏州</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">深圳</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">香港</div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="button">澳门</div>
+                <div class="button-wrapper" 
+                v-for="item of hot"
+                 :key="item.id"
+                 @click="handleCityClick(item.name)">
+                    <div class="button">{{item.name}}</div>
                 </div>
             </div>
         </div>
-        <div class="area">
-            <div class="title border-topbottom">A</div>
+        <div 
+            class="area"
+            v-for="(item,key) of cities" 
+            :key="key"
+            :ref="key"
+            >
+            <div class="title border-topbottom">{{key}}</div>
             <div item-list>
-                <div class="item border-bottom"> 阿拉尔</div>
-                <div class="item border-bottom"> 阿卡卡</div>
-                <div class="item border-bottom"> 阿拉西</div>
-                <div class="item border-bottom"> 阿柯泽</div>
-            </div>
-            <div class="title border-topbottom">B</div>
-            <div item-list>
-                <div class="item border-bottom"> 伯恩</div>
-                <div class="item border-bottom"> 亳州</div>
-                <div class="item border-bottom"> 柏平大</div>
-                <div class="item border-bottom"> 博达</div>
-            </div>
-            <div class="title border-topbottom">C</div>
-            <div item-list>
-                <div class="item border-bottom"> 尘都</div>
-                <div class="item border-bottom"> 成都</div>
-                <div class="item border-bottom"> 承都</div>
-                <div class="item border-bottom"> 查没</div>
-            </div>
-            <div class="title border-topbottom">D</div>
-            <div item-list>
-                <div class="item border-bottom">德州</div>
-                <div class="item border-bottom"> 德纵</div>
-                <div class="item border-bottom"> 德勒</div>
-                <div class="item border-bottom"> 德克</div>
+                <div class="item border-bottom"
+                 v-for="innerItem of item"
+                  :key="innerItem.id"
+                  @click="handleCityClick(innerItem.name)"
+                  >
+                     {{innerItem.name}}</div>
             </div>
         </div>
     </div>
@@ -72,9 +43,28 @@
 import Bscroll from 'better-scroll'
 export default {
     name:'CityList',
+    props:{
+        hot:Array,
+        cities:Object,
+        letter: String
+    },
+    methods :{
+        handleCityClick (city) {
+            this.$store.commit('changeCity',city)
+            this.$router.push('/')
+        }
+    },
       mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
-  }
+        this.scroll = new Bscroll(this.$refs.wrapper)
+     },
+     watch:{
+         letter () {
+             if(this.letter){
+                 const element = this.$refs[this.letter] [0]
+                 this.scroll.scrollToElement(element)
+             }
+         }
+     }
 }
 </script>
 <style lang="stylus" scoped>
