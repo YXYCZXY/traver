@@ -21,6 +21,7 @@ export default {
     },
     data(){
         return {
+            // ???
             swiperOption : {
                 autoplay:false
             }
@@ -28,6 +29,7 @@ export default {
     },
     computed:{
         pages (){
+            // ???
             const pages = []
             this.list.forEach((item,index) => {
                 const page = Math.floor(index / 8)

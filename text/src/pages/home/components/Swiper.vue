@@ -20,6 +20,7 @@ export default {
     },
     data () {
         return {
+            // ???
             swiperOption:{
                 pagination: '.swiper-pagination',
                 loop:true
@@ -27,6 +28,7 @@ export default {
         }
     },
     computed: {
+        // ???
         showSwiper (){
             return this.list.length
         }

@@ -19,6 +19,7 @@ import axios from 'axios'
 import {mapState} from 'vuex'
 export default {
     name: 'Home',
+    // 组件名
     components:{
         HomeHeader,
         HomeSwiper,
@@ -35,14 +36,17 @@ export default {
              weekendList:[]
         }
     },
+    // ???
     computed:{
         ...mapState (['city'] )
     },
     methods : {
+        // 读取ajas？？
         getHomeInfo ( ) {
             axios.get('static/mock/index.json?city=' + this.city)
                 .then(this.getHomeInfoSucc)
         },
+        // 传递参数？？
         getHomeInfoSucc (res){
             res = res.data
             if (res.ret && res.data){
@@ -54,10 +58,12 @@ export default {
             }
         }
     },
+    // ???
     mounted(){
         this.lastCity = this.city
         this.getHomeInfo()
     },
+    // ？？？
     activated(){
       if (this.lastCity !== this.city) {
       this.lastCity = this.city
